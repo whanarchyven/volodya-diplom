@@ -13,14 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/fetch_video',[App\Http\Controllers\VideoController::class,'fetch']);
+Route::get('/', [App\Http\Controllers\VideoController::class, 'fetch']);
 
-Route::get('/index_u',[App\Http\Controllers\VideoController::class,'index']);
+Route::get('/index_u', [App\Http\Controllers\VideoController::class, 'index']);
 
-Route::post('/insert_video',[App\Http\Controllers\VideoController::class,'insert'])->name('insert.file');
-
-
+Route::post('/insert_video', [App\Http\Controllers\VideoController::class, 'insert'])->name('insert.file');
